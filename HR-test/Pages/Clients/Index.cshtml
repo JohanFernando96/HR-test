@@ -1,0 +1,28 @@
+﻿@page
+@model HR_test.Pages.Clients.IndexModel
+@{
+}
+
+<br />
+<h2>List of Employees</h2>
+<br />
+<a class="btn btn-primary btn-sm" href="/Clients/Create/Create">New Employee</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listEmployees)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.email</td>
+            </tr>
+        }
+    </tbody>
+</table>
