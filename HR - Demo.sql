@@ -1,4 +1,11 @@
-﻿CREATE TABLE employee
+﻿CREATE DATABASE employee
+ 
+ CREATE TABLE [dbo].[employee] (
+    [empid]    INT           IDENTITY (1, 1) NOT NULL,
+    [empName]  VARCHAR (100) NULL,
+    [empEmail] VARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([empid] ASC)
+);
  
  INSERT Into employee (empName, empEmail) VALUES
 ('Johan Fernando', 'johanfernando@gmail.com'),
