@@ -1,0 +1,28 @@
+﻿@page
+@model HR_test.Pages.Clients.View.ViewModel
+@{
+}
+
+<br />
+<h2>View Employee</h2>
+
+<form method="get">
+    <input type="hidden" name="id" value="@Model.employeeinfo.id" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Name</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="name" value="@Model.employeeinfo.name" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.employeeinfo.email" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Go Back</a>
+        </div>
+    </div>
+</form>

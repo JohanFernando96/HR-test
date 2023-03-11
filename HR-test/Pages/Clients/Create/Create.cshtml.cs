@@ -15,6 +15,7 @@ namespace HR_test.Pages.Clients.Create
         public void OnPost()
         {
             employeeInfo.name = Request.Form["name"];
+            employeeInfo.email = Request.Form["email"];
             
             //Saving Data
 
@@ -25,12 +26,13 @@ namespace HR_test.Pages.Clients.Create
                 {
                     connection.Open();
                     String sql = "INSERT INTO employee " +
-                                 "(empName) VALUES " +
-                                 "(@name);";
+                                 "(empName, empEmail) VALUES " +
+                                 "(@name, @email);";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@name", employeeInfo.name);
+                        command.Parameters.AddWithValue("@email", employeeInfo.email);
 
                         command.ExecuteNonQuery();
                     }

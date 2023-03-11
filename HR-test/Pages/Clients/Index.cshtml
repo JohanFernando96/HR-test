@@ -7,12 +7,15 @@
 <h2>List of Employees</h2>
 <br />
 <a class="btn btn-primary btn-sm" href="/Clients/Create/Create">New Employee</a>
+<br />
+<br />
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Option</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +25,9 @@
                 <td>@item.id</td>
                 <td>@item.name</td>
                 <td>@item.email</td>
+                <td>
+                    <a class="btn btn-success btn-sm" href="/Clients/View?id=@item.id">View</a>
+                </td>
             </tr>
         }
     </tbody>
